@@ -25,7 +25,7 @@ module.exports = function todoRepository(db) {
     };
 
     async function createTable() {
-        let sql = 'CREATE TABLE tasks(id int AUTO_INCREMENT, taskName VARCHAR(255), date VARCHAR(255), PRIMARY KEY(id))';
+        let sql = 'CREATE TABLE tasks(id int AUTO_INCREMENT, taskName VARCHAR(255), date DATE, PRIMARY KEY(id))';
         dataB.query(sql, (err, result)=>{
             if(err) throw err;
             console.log(result);
@@ -34,9 +34,11 @@ module.exports = function todoRepository(db) {
     }
 
     async function create(task) {
-        task = Object.assign({}, task, {id: db.length+ 1});
-        db.push(task);
-        return task;
+        const query = `INSERT INTO tasks (taskName, date) VALUES ("${task}", DATE(NOW()))`;
+        dataB.query(query, (err, result) => {
+            if (err) throw err;
+            console.log(result);
+        });
     }
 
     async function list() {

@@ -16,13 +16,20 @@ router.route('/')
 router.route('/:id')
     .delete(deleteTask);
 
+router.route('/add')
+    .get( async (req, res) => {
+        const result = await todoRepository.insertTask(req.query.task);
+        res.json(result);
+        console.log(result);
+    });
+
 async function createTable(req, res) {
     await todoRepository.createTable();
     res.send('Tasks table created');
 }
 
 async function create(req, res) {
-    const result =  await todoRepository.create(req.body);
+    const result =  await todoRepository.create(req.body.task);
     res.json(result);
 }
 
