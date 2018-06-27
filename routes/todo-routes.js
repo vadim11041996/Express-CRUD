@@ -8,7 +8,7 @@ module.exports = function (todoRepository) {
         .get(list);
 
     router.route('/:id')
-        .delete(deleteTask);
+        .delete(deleteTask)
 
     async function create(req, res) {
         const result =  await todoRepository.create(req.body.task);
@@ -29,4 +29,3 @@ module.exports = function (todoRepository) {
 
     return router;
 };
-
