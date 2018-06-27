@@ -43,13 +43,13 @@ module.exports = function todoRepository(db) {
         return  db;
     }
 
+    //Delete post
     async function remove(id) {
-        var start =  db.findIndex((task) => {
-            console.log('task', task, id);
-            return task.id == id;
+        let sql = `DELETE FROM  tasks WHERE id = ${id}`;
+        let query = dataB.query(sql, (err, result)=> {
+            if (err) throw err;
+            console.log(result);
         });
-        db.splice(start,1)
-        console.log("Jora are start : "+ start);
         return 1;
     }
 };

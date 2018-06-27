@@ -16,6 +16,7 @@ router.route('/')
 router.route('/:id')
     .delete(deleteTask);
 
+
 async function createTable(req, res) {
     await todoRepository.createTable();
     res.send('Tasks table created');
@@ -31,8 +32,9 @@ async function list(req, res) {
     console.log(list);
     res.json(list);
 }
+
 async function deleteTask(req, res){
-    console.log(req.params);
+    //console.log(req.params);
     await todoRepository.remove(req.params.id);
     res.sendStatus(204).end();
 }
