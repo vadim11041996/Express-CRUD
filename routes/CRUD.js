@@ -2,22 +2,6 @@ let locUndeSePastreazaTodourile = [];
 
 const express = require('express');
 const router = express.Router();
-const levelup = require('levelup');
-const leveldown = require('leveldown');
-
-const db = levelup(leveldown('./mydb'));
-
-db.put('name', 'levelup', function (err) {
-    if (err) return console.log('Ooops!', err) // some kind of I/O error
-
-    // 3) Fetch by key
-    db.get('name', function (err, value) {
-        if (err) return console.log('Ooops!', err) // likely the key was not found
-
-        // Ta da!
-        console.log('name=' + value)
-    })
-});
 
 const todoRepository = require('../repository/todo.repository')(locUndeSePastreazaTodourile);
 router.route('/')
