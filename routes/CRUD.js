@@ -21,7 +21,6 @@ router.route('/add')
   .get(async (req, res) => {
     const result = await todoRepository.create(req.query.task);
     res.json(result);
-    console.log(result);
   });
 
 async function createTable(req, res) {
@@ -36,7 +35,6 @@ async function create(req, res) {
 
 async function list(req, res) {
   const result = await todoRepository.list();
-  console.log(`List:\n${result}`);
   res.json(result);
 }
 
