@@ -1,20 +1,22 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const path = require('path');
+const mysql = require('mysql');
 
-const app = express();
-const port = process.env.PORT || 3000;
-
-const crudTasks = require('./routes/CRUD');
-
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, 'public')));
-
-app.use('/tasks/api',crudTasks);
-
-app.listen(port, ()=>{
-    console.log('Server started on: ' + port);
+const db = mysql.createConnection({
+    host: '192.168.99.100',
+    user: 'root',
+    password: 'parola',
+    database: 'taskDb',
 });
 
-module.exports = app;
+const port = process.env.PORT || 3000;
+
+db.connect(loadApplication);
+
+function loadApplication(err) {
+    if (err) throw  err;
+
+    const app = require('./app')(db);
+
+    app.listen(port, () => {
+        console.log('Server started on: ' + port);
+    });
+}

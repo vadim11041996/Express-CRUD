@@ -20,8 +20,7 @@ module.exports = function todoRepository(ram) {
             console.log('task', task, id);
             return task.id == id;
         });
-        ram.splice(start,1)
-        console.log("Start : "+ start);
+        ram.splice(start,1);
         return 1;
     }
 };
