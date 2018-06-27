@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const path = require('path');
 
 const app = express();
-const port = 4444;
+const port = process.env.PORT || 3000;
 
 const crudTasks = require('./routes/CRUD');
 
