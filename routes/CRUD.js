@@ -4,12 +4,22 @@ const express = require('express');
 const router = express.Router();
 
 const todoRepository = require('../repository/todo.repository')(locUndeSePastreazaTodourile);
+
+router.route('/createtable')
+    .get(createTable);
+
 router.route('/')
     .post(create)
-    .get(list);
+    .get(list)
+    .get();
 
 router.route('/:id')
     .delete(deleteTask);
+
+async function createTable(req, res) {
+    await todoRepository.createTable();
+    res.send('Tasks table created');
+}
 
 async function create(req, res) {
     const result =  await todoRepository.create(req.body);

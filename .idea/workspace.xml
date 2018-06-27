@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb878fc9-e14e-40f4-b590-6b38b1918f4d" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/mydb/000008.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mydb/CURRENT" beforeDir="false" afterPath="$PROJECT_DIR$/mydb/CURRENT" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mydb/LOG" beforeDir="false" afterPath="$PROJECT_DIR$/mydb/LOG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mydb/MANIFEST-000006" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/todo.repository.js" beforeDir="false" afterPath="$PROJECT_DIR$/repository/todo.repository.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/CRUD.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/CRUD.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,26 +19,26 @@
       <file leaf-file-name="server.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="-118">
               <caret column="9" selection-start-column="9" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CRUD.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CRUD.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/CRUD.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="124">
-              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+            <state relative-caret-position="93">
+              <caret line="3" column="32" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="todo.repository.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="todo.repository.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/repository/todo.repository.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="341">
-              <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+            <state relative-caret-position="1023">
+              <caret line="33" column="5" lean-forward="true" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -70,9 +69,9 @@
         <option value="$PROJECT_DIR$/routes/Get.js" />
         <option value="$PROJECT_DIR$/routes/Delete.js" />
         <option value="$PROJECT_DIR$/routes/Create.js" />
-        <option value="$PROJECT_DIR$/repository/todo.repository.js" />
         <option value="$PROJECT_DIR$/server.js" />
         <option value="$PROJECT_DIR$/routes/CRUD.js" />
+        <option value="$PROJECT_DIR$/repository/todo.repository.js" />
       </list>
     </option>
   </component>
@@ -165,12 +164,12 @@
       <updated>1530006998901</updated>
       <workItem from="1530007000151" duration="5817000" />
       <workItem from="1530012912125" duration="10675000" />
-      <workItem from="1530079599846" duration="1337000" />
+      <workItem from="1530079599846" duration="3168000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17829000" />
+    <option name="totallyTimeSpent" value="19660000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1592" y="-8" width="1936" height="1096" extended-state="6" />
@@ -269,22 +268,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="-118">
           <caret column="9" selection-start-column="9" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/repository/todo.repository.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/CRUD.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        <state relative-caret-position="93">
+          <caret line="3" column="32" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/repository/todo.repository.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1023">
+          <caret line="33" column="5" lean-forward="true" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
         </state>
       </provider>
     </entry>
