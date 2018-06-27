@@ -12,7 +12,7 @@ module.exports = function todoRepository(db) {
     }
 
     async function list() {
-        const sql = 'SELECT * FROM tasks';
+        let sql = 'SELECT * FROM tasks';
 
         return await execRawQuery(sql);
     }

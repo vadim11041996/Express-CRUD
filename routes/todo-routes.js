@@ -17,16 +17,13 @@ module.exports = function (todoRepository) {
 
     async function list(req, res) {
         const list = await todoRepository.list();
-        //console.log(list);
         res.json(list);
     }
 
     async function deleteTask(req, res){
-        //console.log(req.params);
         await todoRepository.remove(req.params.id);
         res.sendStatus(204).end();
     }
 
     return router;
 };
-
