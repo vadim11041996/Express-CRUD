@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-module.exports = function (todoRepository) {
+module.exports = function (joraRepository) {
 
     router.route('/')
         .post(create)
@@ -10,18 +10,19 @@ module.exports = function (todoRepository) {
     router.route('/:id')
         .delete(deleteTask)
 
-    async function create(req, res) {
-        const result =  await todoRepository.create(req.body.taskName);
+    function create(req, res) {
+        console.log("joraRoutes, create");
+        const result =  joraRepository.create(req.body.taskName);
         res.json(result);
     }
 
     async function list(req, res) {
-        const list = await todoRepository.list();
+        const list = await joraRepository.list();
         res.json(list);
     }
 
     async function deleteTask(req, res){
-        await todoRepository.remove(req.params.id);
+        await joraRepository.remove(req.params.id);
         res.sendStatus(204).end();
     }
 

@@ -7,6 +7,10 @@ services:
       - 3306:3306
     environment: 
       - MYSQL_ROOT_PASSWORD=parola
+  mongo:
+    image: mongo:3.6
+    ports:
+      - 27017:27017
 
 #  server:
 #    build: .

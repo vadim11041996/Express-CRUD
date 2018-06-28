@@ -10,7 +10,7 @@ module.exports = function todoRepository(db) {
 
         return execRawQuery(query);
     }
-
+    
     async function list() {
         let sql = 'SELECT * FROM tasks';
 
